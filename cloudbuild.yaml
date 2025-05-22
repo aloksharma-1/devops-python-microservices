@@ -1,0 +1,30 @@
+steps:
+  # Build and push auth-service image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/auth-service', './auth-service']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/auth-service']
+
+  # Build and push task-service image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/task-service', './task-service']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/task-service']
+
+  # Build and push notifier-service image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/notifier-service', './notifier-service']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/notifier-service']
+
+  # Deploy Kubernetes manifests
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['apply', '-f', 'kubernetes/']
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=devops-cluster'
+
+images:
+  - 'gcr.io/$PROJECT_ID/auth-service'
+  - 'gcr.io/$PROJECT_ID/task-service'
+  - 'gcr.io/$PROJECT_ID/notifier-service'
