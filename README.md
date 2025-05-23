@@ -1,4 +1,3 @@
-# devops-python-microservices
 # 🚀 DevOps Python Microservices on Google Cloud
 
 This is a production-grade DevOps project demonstrating how to build, containerize, deploy, and manage **Python-based microservices** using **Docker**, **Kubernetes**, **Terraform**, and **CI/CD on Google Cloud Platform**.
@@ -68,6 +67,12 @@ Sends task notifications (console/email simulation).
 │   └── main.tf
 ├── cloudbuild.yaml
 └── README.md
+
+
+
+---
+
+## 📦 Step of steup the code
 
 ⚙️ Setup & Deployment Guide
 1️⃣ Clone the Repo
