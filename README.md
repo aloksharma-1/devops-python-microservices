@@ -45,36 +45,8 @@ Sends task notifications (console/email simulation).
 **Port:** `5002`
 
 ---
-
-## 📦 Project Structure
-
-```bash
-.
-├── auth-service/
-│   ├── main.py
-│   └── requirements.txt
-├── task-service/
-│   ├── main.py
-│   └── requirements.txt
-├── notifier-service/
-│   ├── main.py
-│   └── requirements.txt
-├── kubernetes/
-│   ├── auth-deployment.yaml
-│   ├── task-deployment.yaml
-│   └── notifier-deployment.yaml
-├── terraform/
-│   └── main.tf
-├── cloudbuild.yaml
-└── README.md
-
-
-
-```bash
-
-## 📦 Step of steup the code
-
 ⚙️ Setup & Deployment Guide
+
 1️⃣ Clone the Repo
 git clone https://github.com/aloksharma-1/devops-python-microservices.git
 cd devops-python-microservices
@@ -131,3 +103,30 @@ Use Google Cloud Console:
 Cloud Logging → Logs Explorer
 
 Cloud Monitoring → GKE Dashboard
+
+## 📦 Project Structure
+
+```bash
+.
+├── auth-service/
+│   ├── main.py
+│   └── requirements.txt
+├── task-service/
+│   ├── main.py
+│   └── requirements.txt
+├── notifier-service/
+│   ├── main.py
+│   └── requirements.txt
+├── kubernetes/
+│   ├── auth-deployment.yaml
+│   ├── task-deployment.yaml
+│   └── notifier-deployment.yaml
+├── terraform/
+│   └── main.tf
+├── cloudbuild.yaml
+└── README.md
+
+
+
+
+
