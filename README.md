@@ -70,7 +70,7 @@ Sends task notifications (console/email simulation).
 
 
 
----
+```bash
 
 ## 📦 Step of steup the code
 
